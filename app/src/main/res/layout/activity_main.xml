@@ -3,14 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="#D5E6B4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D5E6B4"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/editTextText"
-        android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
@@ -18,6 +17,7 @@
         android:ems="10"
         android:hint="Enter name"
         android:inputType="text"
+        android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="32dp"
+        android:onClick="myClickHandler"
         android:text="Login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
@@ -47,7 +48,8 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
         android:text="Cancel"
-        tools:layout_editor_absoluteX="187dp"
-        tools:layout_editor_absoluteY="232dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
